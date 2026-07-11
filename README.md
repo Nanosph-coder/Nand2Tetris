@@ -1,7 +1,9 @@
 # Nand to Tetris Hardware Projects
 
+*Completed as part of the **Week 3 Task** for **ArIES, IIT Roorkee***
+
 ## Overview
-This repository contains the hardware implementation files for the initial projects of the Nand to Tetris curriculum. The projects progress from elementary logic gates to a fully functional Arithmetic-Logic Unit (ALU) for the Hack computer architecture.
+This repository contains the hardware implementation files for the initial projects of the Nand to Tetris curriculum, undertaken as the Week 3 task for ArIES at IIT Roorkee. The projects progress from elementary logic gates, through Boolean arithmetic, and into sequential logic and memory architectures for the Hack computer.
 
 ---
 
@@ -38,8 +40,30 @@ Build a set of chips that carry out arithmetic addition, culminating in the cons
 
 ---
 
+## Project 3: Memory
+
+### Objective
+Build a Random Access Memory (RAM) unit, which is an addressable sequence of registers designed to hold n-bit values. This involves using gate logic to store bits persistently over time and locating (addressing) the specific memory register on which we wish to operate.
+
+### Chips Implemented
+* `Bit`
+* `Register`
+* `RAM8`
+* `RAM64`
+* `RAM512`
+* `RAM4K`
+* `RAM16K`
+* `PC` (Program Counter)
+
+### Implementation Details
+* **Primitive:** The Data Flip-Flop (`DFF`) gate is considered primitive, so it is provided as a base and does not need to be implemented.
+* **Dependencies:** Implementations can use any chips built in Projects 1, 2, and earlier chips in Project 3.
+* **Folder Structure:** If using the desktop simulator, the project files are divided into two subfolders (`a` and `b`) for technical reasons. This structure must be maintained as-is without moving files between them.
+
+---
+
 ## Testing and Verification
-All chips are verified using the **Nand2Tetris Hardware Simulator** (Desktop or Online IDE).
+All chips are verified using the **Nand2Tetris Hardware Simulator** (Online IDE).
 
 For every chip, the testing workflow relies on:
 1. **`.hdl` (Hardware Description Language):** The implementation file containing your logic.
